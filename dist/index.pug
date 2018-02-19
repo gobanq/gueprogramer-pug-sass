@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    include header.pug
+    body
+        nav(class="navbar navbar-expand-md fixed-top")
+            a(href="index.html" class="navbar-brand") GUE<b>PROGRAMER</b>
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#navbarsCollapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.nav-link(href="#") About
+                    li.nav-item
+                        a.nav-link(href="#") Tutorial
+                    //- li.nav-item.dropdown
+                    //-     a(class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Tutorial
+                    //-     .dropdown-menu(aria-labelledby="dropdown01")
+                    //-         a.dropdown-item(href="#") React JS
+                    //-         a.dropdown-item(href="#") Angular
+                form(class="form-inline my-2 my-lg-0")
+                    input(class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search")
+                    button(class="btn my-2 my-sm-0" type="submit") Search
+        
+        //- MAIN PAGE
+
+
+        script(src="js/jquery-3.2.1.slim.min.js")
+        script(src="js/popper.min.js")
+        script(src="js/holder.min.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/script.js")
+        script(src="http://localhost:35729/livereload.js")
+        
