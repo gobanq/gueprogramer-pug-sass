@@ -67,7 +67,7 @@ a:hover {
     article.post {
         padding-bottom: 20px;
         border-bottom: 3px dotted #eee;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         header.entry-header {
             h3.entry-title {
                 font-weight: 700;
@@ -96,6 +96,43 @@ a:hover {
         .entry-content {
             p {
                 color: #737e8e;
+            }
+        }
+        .read-more {
+            background-color: #16eafd;
+            color: #FFF;
+            font-weight: bold;
+            float: right;
+            margin-top: 4px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            &::before {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                margin: -15px 0 0 1px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #ea4b3c;
+                -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+                -webkit-transform: scale3d(1, 2, 1);
+                transform: scale3d(1, 2, 1);
+                -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+                transition: transform 0.3s, opacity 0.3s;
+                -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+                transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+            }
+            &:hover {
+                border: 1px solid #ea4b3c;
+                &::before {
+                    -webkit-transform: scale3d(9, 9, 1);
+                    transform: scale3d(9, 9, 1);
+                }
             }
         }
     }
