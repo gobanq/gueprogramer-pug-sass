@@ -17,6 +17,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 
 /* BUTTON */
 
@@ -38,36 +42,61 @@ body {
             color: $main-color;
         }
     }
-    .nav-item a {
-        font-weight: 700;
-        color: #4f6c82;
-        position: relative;
-        transition: color 0.5s;
-        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-        margin-right: 15px;
-        &:hover {
-            color: $main-color;
-        }
-        &:hover::before {
-            transform: scale3d(1, 1, 1);
-        }
-        &::before {
-            background: $main-color;
-            content: '';
-            position: absolute;
-            z-index: -1;
-            bottom: 25%;
-            left: 0;
-            width: 100%;
-            height: 15%;
-            opacity: 0.3;
-            transform: scale3d(0, 1, 1);
-            transform-origin: 0% 50%;
-            transition: transform 0.5s;
-            transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    .nav-item {
+        @import "link";
+        a.dropdown-item::before {
+            background: none;
         }
     }
     .navbar-toggler .navbar-toggler-icon {
         color: #eee;
+    }
+}
+
+
+/* end navbar */
+
+.jumbotron {
+    margin-top: 56px;
+    background: #f7dc65;
+    // color: #fff;
+}
+
+.main {
+    margin-top: 120px;
+    article.post {
+        padding-bottom: 20px;
+        border-bottom: 3px dotted #eee;
+        margin-bottom: 30px;
+        header.entry-header {
+            h3.entry-title {
+                font-weight: 700;
+                text-transform: uppercase;
+                @import "link";
+                a {
+                    &:hover {
+                        color: inherit;
+                    }
+                    &::before {
+                        bottom: 0;
+                        height: 35%;
+                        opacity: 0.8;
+                    }
+                }
+            }
+            time.entry-date {
+                color: #4f6c82;
+                margin-bottom: 7px;
+                display: block;
+                &::before {
+                    content: "\2014 \00A0";
+                }
+            }
+        }
+        .entry-content {
+            p {
+                color: #737e8e;
+            }
+        }
     }
 }

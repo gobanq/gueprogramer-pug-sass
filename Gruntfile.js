@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: [{
-                    src: 'dist/sass/*.scss',
+                    src: 'dist/sass/style.scss',
                     dest: 'build/css/style.css'
                 }]
             }
@@ -15,8 +15,7 @@ module.exports = function(grunt) {
             compile: {
                 files: {
                     'build/index.html': ['dist/index.pug'],
-                    'build/post.html': 'dist/post.pug',
-                    'build/in.html': 'dist/in1.pug'
+                    'build/post.html': 'dist/post.pug'
                 }
             }
         },
