@@ -35,11 +35,13 @@ html(lang="en")
             a.read-more.btn.btn-sm(href="post.html"  rel="bookmark") Read
         aside.col-md-3
           .widget
-            .widget-title Tag Cloud
+            .widget-title
+              i.material-icons.md-18 label
+              span Tag Cloud
             .tagCloud
               - var list = ['Ajax', 'ReactJS', 'Angular', 'Laravel']
               each item in list
-                a.tag-cloud-link(href="#") item
+                a.tag-cloud-link(href="#")= item
                   sup 10
         
     include footer.pug

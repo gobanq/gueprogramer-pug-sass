@@ -21,6 +21,10 @@ a:hover {
     text-decoration: none;
 }
 
+i.material-icons {
+    vertical-align: middle;
+}
+
 
 /* BUTTON */
 
@@ -116,12 +120,24 @@ aside {
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 20px;
+            font-size: 20px;
+            .material-icons {
+                color: $main-color;
+            }
+            span {
+                vertical-align: middle;
+                margin-left: 15px;
+            }
         }
         .tagCloud {
             a.tag-cloud-link {
                 display: inline-block;
                 margin-right: 10px;
                 color: #737e8e;
+                &:hover {
+                    border-bottom: 1px solid $main-color;
+                    color: $main-color;
+                }
             }
         }
     }
