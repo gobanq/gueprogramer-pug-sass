@@ -63,10 +63,13 @@ a:hover {
 /* end navbar */
 .jumbotron {
   margin-top: 56px;
-  background: #f7dc65; }
+  background: #f7dc65;
+  margin-bottom: 0; }
 
 .main {
-  margin-top: 120px; }
+  padding-top: 100px;
+  border-left: 3px dotted #eee;
+  padding-left: 60px; }
   .main article.post {
     padding-bottom: 20px;
     border-bottom: 3px dotted #eee;
@@ -110,7 +113,7 @@ a:hover {
       margin-bottom: 7px;
       display: block; }
       .main article.post header.entry-header time.entry-date::before {
-        content: "\2014 \00A0"; }
+        content: "\2015 \00A0"; }
     .main article.post .entry-content p {
       color: #737e8e; }
     .main article.post .read-more {
@@ -118,33 +121,23 @@ a:hover {
       color: #FFF;
       font-weight: bold;
       float: right;
-      margin-top: 4px;
-      overflow: hidden;
-      position: relative;
-      z-index: 1; }
-      .main article.post .read-more::before {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        margin: -15px 0 0 1px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: #ea4b3c;
-        -webkit-transform-origin: 100% 50%;
-        transform-origin: 100% 50%;
-        -webkit-transform: scale3d(1, 2, 1);
-        transform: scale3d(1, 2, 1);
-        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-        transition: transform 0.3s, opacity 0.3s;
-        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
-        transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1); }
-      .main article.post .read-more:hover {
-        border: 1px solid #ea4b3c; }
-        .main article.post .read-more:hover::before {
-          -webkit-transform: scale3d(9, 9, 1);
-          transform: scale3d(9, 9, 1); }
+      margin-top: 4px; }
+
+aside .widget .widget-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px; }
+aside .widget .tagCloud a.tag-cloud-link {
+  display: inline-block;
+  margin-right: 10px;
+  color: #737e8e; }
+
+footer {
+  margin-top: 50px;
+  border-bottom: 4px solid #ea4b3c; }
+  footer p {
+    color: #a5a5a5; }
+    footer p b {
+      color: #ea4b3c; }
 
 /*# sourceMappingURL=style.css.map */
