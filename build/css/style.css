@@ -131,7 +131,7 @@ aside .widget .widget-title {
   font-weight: bold;
   margin-bottom: 20px;
   font-size: 20px; }
-  aside .widget .widget-title .material-icons {
+  aside .widget .widget-title i.fa {
     color: #ea4b3c; }
   aside .widget .widget-title span {
     vertical-align: middle;
@@ -139,7 +139,8 @@ aside .widget .widget-title {
 aside .widget .tagCloud a.tag-cloud-link {
   display: inline-block;
   margin-right: 10px;
-  color: #737e8e; }
+  color: #737e8e;
+  border-bottom: 1px solid #f7f7f7; }
   aside .widget .tagCloud a.tag-cloud-link:hover {
     border-bottom: 1px solid #ea4b3c;
     color: #ea4b3c; }

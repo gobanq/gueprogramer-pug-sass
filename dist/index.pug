@@ -36,12 +36,15 @@ html(lang="en")
         aside.col-md-3
           .widget
             .widget-title
-              i.material-icons.md-18 label
+              i.fas.fa-tag
               span Tag Cloud
             .tagCloud
               - var list = ['Ajax', 'ReactJS', 'Angular', 'Laravel']
               each item in list
                 a.tag-cloud-link(href="#")= item
                   sup 10
+          //- .widget
+          //-   .widget-title
+          //-     i.material-icons.md-18 twitter
         
     include footer.pug
