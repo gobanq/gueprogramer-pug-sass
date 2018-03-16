@@ -33,18 +33,6 @@ html(lang="en")
               p The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
             //- .d-flex.flex-row-reverse
             a.read-more.btn.btn-sm(href="post.html"  rel="bookmark") Read
-        aside.col-md-3
-          .widget
-            .widget-title
-              i.fas.fa-tag
-              span Tag Cloud
-            .tagCloud
-              - var list = ['Ajax', 'ReactJS', 'Angular', 'Laravel']
-              each item in list
-                a.tag-cloud-link(href="#")= item
-                  sup 10
-          //- .widget
-          //-   .widget-title
-          //-     i.material-icons.md-18 twitter
+        include sidebar.pug
         
     include footer.pug

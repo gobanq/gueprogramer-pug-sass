@@ -67,7 +67,11 @@ i.material-icons {
 .jumbotron {
   margin-top: 56px;
   background: #f7dc65;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border-radius: 0; }
+  .jumbotron.post {
+    background: #eb4a3c;
+    color: #f7f7f7; }
 
 .main {
   padding-top: 100px;
@@ -126,24 +130,40 @@ i.material-icons {
       float: right;
       margin-top: 4px; }
 
-aside .widget .widget-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 20px;
-  font-size: 20px; }
-  aside .widget .widget-title i.fa {
-    color: #ea4b3c; }
-  aside .widget .widget-title span {
-    vertical-align: middle;
-    margin-left: 15px; }
-aside .widget .tagCloud a.tag-cloud-link {
-  display: inline-block;
-  margin-right: 10px;
-  color: #737e8e;
-  border-bottom: 1px solid #f7f7f7; }
-  aside .widget .tagCloud a.tag-cloud-link:hover {
-    border-bottom: 1px solid #ea4b3c;
-    color: #ea4b3c; }
+aside .widget {
+  margin-bottom: 15px;
+  color: #737e8e; }
+  aside .widget .widget-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #4f6b82; }
+    aside .widget .widget-title i.fa {
+      color: #ea4b3c; }
+    aside .widget .widget-title .svg-inline--fa {
+      color: #ea4b3c;
+      margin-bottom: -3px;
+      width: 20px; }
+    aside .widget .widget-title span {
+      vertical-align: middle;
+      margin-left: 15px; }
+  aside .widget .tagCloud a.tag-cloud-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #737e8e;
+    border-bottom: 1px solid #f7f7f7; }
+    aside .widget .tagCloud a.tag-cloud-link:hover {
+      border-bottom: 1px solid #ea4b3c;
+      color: #ea4b3c; }
+  aside .widget .author {
+    float: left; }
+    aside .widget .author .author-foto {
+      max-width: 67px;
+      height: auto;
+      margin: 0 10px 5px 0;
+      border-radius: 5px;
+      float: left; }
 
 footer {
   margin-top: 50px;

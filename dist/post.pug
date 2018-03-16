@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 html(lang="en")
   include header.pug
+  - var post = true
   body
     include nav.pug
-      
+    
+    //- MAIN PAGE
+    .jumbotron.post
+      .container
+        h1.display-3.bold Hello, world!
+
     //- MAIN PAGE
     .container.main
       .row
-        .col Judul
-        .col kata pengantar
-        .col gambar
-      .row
-        .col-md-9 Main Post
-        .col-md-3 Sidebar
+        .col-md-9
+          article.post
+            header.entry-header
+              h3.entry-title 
+                a(href="post.html" rel="bookmark") Worth A Thousand Words
+              a(href="post.html" rel="bookmark")
+                time.entry-date Maret 17, 2018
 
+            .entry-content
+              p The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
+              pre
+                code.language-js
+                    | grunt.loadNpmTasks('grunt-contrib-pug');
+                    | grunt.loadNpmTasks('grunt-contrib-watch');
+                    | grunt.loadNpmTasks('grunt-contrib-sass');
+                    | grunt.registerTask('build', ['sass', 'pug']);
+        include sidebar.pug
+        
     include footer.pug
