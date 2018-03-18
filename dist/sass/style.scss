@@ -14,11 +14,25 @@ body {
     font-family: 'Barlow', Arial, Helvetica, sans-serif;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; 
+    margin-top: 56px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+}
+::selection {
+    background-color: $main-color;
+    color: #FFF;
 }
 
-a:hover {
-    text-decoration: none;
+a {
+    transition-property: color, background, border;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
 i.material-icons {
@@ -33,7 +47,7 @@ i.material-icons {
     // border-radius: 50px;
     padding: .3rem 2rem;
     color: #FFF;
-    font-weight: 700;
+    font-weight: 700;   
 }
 
 .navbar {
@@ -61,7 +75,6 @@ i.material-icons {
 /* end navbar */
 
 .jumbotron {
-    margin-top: 56px;
     background: #f7dc65;
     margin-bottom: 0;
     border-radius: 0;
@@ -79,14 +92,28 @@ i.material-icons {
         padding-bottom: 20px;
         border-bottom: 3px dotted #eee;
         margin-bottom: 50px;
+        color: #737e8e;
+        line-height: 1.8em;
+        ul, ol {
+            padding-left: 2em;
+            -webkit-padding-start: 2em;
+            li {
+                padding-left: 5px;
+            }
+        }
+        ul li {
+            list-style-image: url("/images/bullet.svg");
+        }
         header.entry-header {
+            margin-bottom: 1rem;
             h3.entry-title {
                 font-weight: 700;
                 text-transform: uppercase;
+                margin-bottom: 0.5rem;
                 @import "link";
                 a {
                     &:hover {
-                        color: inherit;
+                        color: #000;
                     }
                     &::before {
                         bottom: 0;
@@ -105,8 +132,48 @@ i.material-icons {
             }
         }
         .entry-content {
-            p {
-                color: #737e8e;
+            a {
+                color: $main-color;
+                border-bottom: 1px dotted $main-color;
+                &:hover {
+                    color: #16eafd;
+                    border-bottom: 1px dotted #16eafd;
+                }
+            }
+            h3 {
+                padding-top: 70px;
+                margin-top: -70px;
+                font-weight: bold;
+                a.heading-hash {
+                    position: absolute;
+                    left: -20px;
+                    border-bottom: none;
+                    color: #a5a5a5;
+                    &:hover {
+                        color: $main-color;
+                    }
+                    .fa-hashtag {
+                        font-size: 20px;
+                        vertical-align: 0;
+                    }
+                }
+            }
+            table.table {
+                background: #FFF;
+                tr {
+                    th {
+                        border-bottom: 3px solid #dee2e6;
+                    }
+                }
+            }
+            code:not([class*="language"]) {
+                color: #fff;
+                background-color: #ad68a3;
+                padding: 4px 7px;
+                border-radius: 2px;
+            }
+            pre {
+                color: #ad68a3;
             }
         }
         .read-more {
@@ -176,4 +243,12 @@ footer {
             color: $main-color;
         }
     }
+}
+
+/** 
+ *  Override Prism CSS 
+ */
+
+pre[class*="language-"] {
+    margin: 1.5em 0;
 }

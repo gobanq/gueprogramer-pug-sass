@@ -10,10 +10,23 @@ body {
   font-family: 'Barlow', Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  margin-top: 56px; }
 
-a:hover {
-  text-decoration: none; }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem; }
+
+::selection {
+  background-color: #ea4b3c;
+  color: #FFF; }
+
+a {
+  transition-property: color, background, border;
+  transition-duration: .15s;
+  transition-timing-function: linear; }
+  a:hover {
+    text-decoration: none;
+    color: #000; }
 
 i.material-icons {
   vertical-align: middle; }
@@ -65,7 +78,6 @@ i.material-icons {
 
 /* end navbar */
 .jumbotron {
-  margin-top: 56px;
   background: #f7dc65;
   margin-bottom: 0;
   border-radius: 0; }
@@ -80,49 +92,90 @@ i.material-icons {
   .main article.post {
     padding-bottom: 20px;
     border-bottom: 3px dotted #eee;
-    margin-bottom: 50px; }
-    .main article.post header.entry-header h3.entry-title {
-      font-weight: 700;
-      text-transform: uppercase; }
-      .main article.post header.entry-header h3.entry-title a {
+    margin-bottom: 50px;
+    color: #737e8e;
+    line-height: 1.8em; }
+    .main article.post ul, .main article.post ol {
+      padding-left: 2em;
+      -webkit-padding-start: 2em; }
+      .main article.post ul li, .main article.post ol li {
+        padding-left: 5px; }
+    .main article.post ul li {
+      list-style-image: url("/images/bullet.svg"); }
+    .main article.post header.entry-header {
+      margin-bottom: 1rem; }
+      .main article.post header.entry-header h3.entry-title {
         font-weight: 700;
-        color: #4f6c82;
-        position: relative;
-        transition: color 0.3s;
-        transition-timing-function: cubic-bezier(0.2, 1, 0.51, 1);
-        margin-right: 15px; }
+        text-transform: uppercase;
+        margin-bottom: 0.5rem; }
+        .main article.post header.entry-header h3.entry-title a {
+          font-weight: 700;
+          color: #4f6c82;
+          position: relative;
+          transition: color 0.3s;
+          transition-timing-function: cubic-bezier(0.2, 1, 0.51, 1);
+          margin-right: 15px; }
+          .main article.post header.entry-header h3.entry-title a:hover {
+            color: #ea4b3c; }
+          .main article.post header.entry-header h3.entry-title a:hover::before {
+            transform: scale3d(1, 1, 1); }
+          .main article.post header.entry-header h3.entry-title a::before {
+            background: #ea4b3c;
+            content: '';
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            width: 100%;
+            height: 15%;
+            z-index: -1;
+            opacity: 0.3;
+            transform: scale3d(0, 1, 1);
+            transform-origin: 0% 50%;
+            transition: transform 0.3s;
+            transition-timing-function: cubic-bezier(0.2, 1, 0.51, 1); }
         .main article.post header.entry-header h3.entry-title a:hover {
-          color: #ea4b3c; }
-        .main article.post header.entry-header h3.entry-title a:hover::before {
-          transform: scale3d(1, 1, 1); }
+          color: #000; }
         .main article.post header.entry-header h3.entry-title a::before {
-          background: #ea4b3c;
-          content: '';
-          position: absolute;
-          bottom: 25%;
-          left: 0;
-          width: 100%;
-          height: 15%;
-          z-index: -1;
-          opacity: 0.3;
-          transform: scale3d(0, 1, 1);
-          transform-origin: 0% 50%;
-          transition: transform 0.3s;
-          transition-timing-function: cubic-bezier(0.2, 1, 0.51, 1); }
-      .main article.post header.entry-header h3.entry-title a:hover {
-        color: inherit; }
-      .main article.post header.entry-header h3.entry-title a::before {
-        bottom: 0;
-        height: 35%;
-        opacity: 0.8; }
-    .main article.post header.entry-header time.entry-date {
-      color: #4f6c82;
-      margin-bottom: 7px;
-      display: block; }
-      .main article.post header.entry-header time.entry-date::before {
-        content: "\2015 \00A0"; }
-    .main article.post .entry-content p {
-      color: #737e8e; }
+          bottom: 0;
+          height: 35%;
+          opacity: 0.8; }
+      .main article.post header.entry-header time.entry-date {
+        color: #4f6c82;
+        margin-bottom: 7px;
+        display: block; }
+        .main article.post header.entry-header time.entry-date::before {
+          content: "\2015 \00A0"; }
+    .main article.post .entry-content a {
+      color: #ea4b3c;
+      border-bottom: 1px dotted #ea4b3c; }
+      .main article.post .entry-content a:hover {
+        color: #16eafd;
+        border-bottom: 1px dotted #16eafd; }
+    .main article.post .entry-content h3 {
+      padding-top: 70px;
+      margin-top: -70px;
+      font-weight: bold; }
+      .main article.post .entry-content h3 a.heading-hash {
+        position: absolute;
+        left: -20px;
+        border-bottom: none;
+        color: #a5a5a5; }
+        .main article.post .entry-content h3 a.heading-hash:hover {
+          color: #ea4b3c; }
+        .main article.post .entry-content h3 a.heading-hash .fa-hashtag {
+          font-size: 20px;
+          vertical-align: 0; }
+    .main article.post .entry-content table.table {
+      background: #FFF; }
+      .main article.post .entry-content table.table tr th {
+        border-bottom: 3px solid #dee2e6; }
+    .main article.post .entry-content code:not([class*="language"]) {
+      color: #fff;
+      background-color: #ad68a3;
+      padding: 4px 7px;
+      border-radius: 2px; }
+    .main article.post .entry-content pre {
+      color: #ad68a3; }
     .main article.post .read-more {
       background-color: #16eafd;
       color: #FFF;
@@ -172,5 +225,11 @@ footer {
     color: #a5a5a5; }
     footer p b {
       color: #ea4b3c; }
+
+/** 
+ *  Override Prism CSS 
+ */
+pre[class*="language-"] {
+  margin: 1.5em 0; }
 
 /*# sourceMappingURL=style.css.map */
